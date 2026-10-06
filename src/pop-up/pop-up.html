@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extension Template</title>
+
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="./pop-up.css">
+
+    <script src="/dist/pop-up/pop-up.global.js" type="module"></script>
+
+</head>
+
+<body>
+    <h1>Chrome Extension Template</h1>
+    <button id="message-service-worker" type="button">Message service worker</button>
+    <button id="message-content-script" type="button">Message active tab</button>
+    <p id="message-status" role="status" aria-live="polite">Ready</p>
+    <h2>Messages received</h2>
+    <ul id="message-events" aria-live="polite"></ul>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "version": "0.0",
+  "name": "Chrome Extension Template",
+  "description": "Template to develop chrome extensions using typescript.",
+  "action": {
+    "default_popup": "src/pop-up/pop-up.html",
+    "default_icon": "assets/icons/logo_32.png"
+  },
+  "icons": {
+    "32": "assets/icons/logo_32.png",
+    "72": "assets/icons/logo_72.png",
+    "128": "assets/icons/logo_128.png",
+    "512": "assets/icons/logo_512.png"
+  },
+  "permissions": [
+    "scripting",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [],
+      "js": [ 
+        "dist/content-scripts/content-script.global.js" 
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "dist/background/service-worker.global.js",
+    "type": "module"
+  }
+}

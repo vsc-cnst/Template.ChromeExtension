@@ -1,0 +1,29 @@
+{
+  "name": "chrome-extension-template",
+  "version": "0.0.0",
+  "description": "Template to develoop chrome extensions using typescript.",
+  "tsup": {
+    "entry": [
+      "src/pop-up/pop-up.ts",
+      "src/content-scripts/content-script.ts",
+      "src/background/service-worker.ts"
+    ],
+    "format": [
+      "iife"
+    ],
+    "bundle": true,
+    "splitting": true,
+    "sourcemap": true,
+    "minify": false,
+    "clean": true
+  },
+  "scripts": {
+    "build": "tsup --tsconfig tsconfig.json",
+    "watch": "tsup --tsconfig tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "chrome-types": "^0.1.452",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
+}
